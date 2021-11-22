@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import FilmsList from '../components/FilmsList';
 import UpcomingFilmsButton from '../components/UpcomingFilmsButton';
+import FilmForm from './FilmForm';
 
 const FilmsContainer = () => {
 
@@ -38,6 +39,7 @@ const FilmsContainer = () => {
         <h1>Upcoming Film Releases for UK</h1>
         <hr></hr>
         <FilmsList films={films}/>
+        <FilmForm />
         <hr></hr>
         <UpcomingFilmsButton/>
         </>
