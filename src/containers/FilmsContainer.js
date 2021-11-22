@@ -9,37 +9,44 @@ const FilmsContainer = () => {
         [
             {
               id: 1,
-              name: "Spider-Man: Into the Spider-Verse",
+              title: "Spider-Man: Into the Spider-Verse",
               url: "https://www.imdb.com/title/tt4633694/?ref_=rlm"
             },
             {
               id: 2,
-              name: "Life Itself",
+              title: "Life Itself",
               url: "https://www.imdb.com/title/tt5989218/?ref_=rlm"
             },
             {
               id: 3,
-              name: "Mary Queen of Scots",
+              title: "Mary Queen of Scots",
               url: "https://www.imdb.com/title/tt2328900/?ref_=rlm"
             },
             {
               id: 4,
-              name: "The Lego Movie 2: The Second Part", url: "https://www.imdb.com/title/tt3513498/?ref_=rlm"
+              title: "The Lego Movie 2: The Second Part", url: "https://www.imdb.com/title/tt3513498/?ref_=rlm"
             },
             {
               id: 5,
-              name: "Captain Marvel",
+              title: "Captain Marvel",
               url: "https://www.imdb.com/title/tt4154664/?ref_=rlm"
             }
           ]          
     )
+
+    const addFilm = (newFilm) => {
+        newFilm.id = Date.now();
+        const upToDateFilms = [...films, newFilm];
+        setFilms(upToDateFilms);
+    }
+
 
     return (
         <>
         <h1>Upcoming Film Releases for UK</h1>
         <hr></hr>
         <FilmsList films={films}/>
-        <FilmForm />
+        <FilmForm onNewFilmSubmit={(film) => addFilm(film)}/>
         <hr></hr>
         <UpcomingFilmsButton/>
         </>
