@@ -3,19 +3,23 @@ import Film from '../components/Film';
 
 const FilmsList = ({films}) => {
 
-
+    const filmNodes = films.map((film) => {
+        return(
+            <li>
+                <Film title={film.name} key={film.id}>
+                {film.url}
+                </Film>
+            </li>
+            
+        )
+    })
 
     
     return(
         <>
         <ul>
-            <Film />
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
+            {filmNodes}
         </ul>
-        
         </>
     )
 }
