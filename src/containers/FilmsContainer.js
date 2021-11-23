@@ -1,3 +1,4 @@
+import react from 'react';
 import React, {useState} from 'react';
 import FilmsList from '../components/FilmsList';
 import UpcomingFilmsButton from '../components/UpcomingFilmsButton';
@@ -40,16 +41,15 @@ const FilmsContainer = () => {
         setFilms(upToDateFilms);
     }
 
-
     return (
-        <>
-        <h1>Upcoming Film Releases for UK</h1>
-        <hr></hr>
-        <FilmsList films={films}/>
-        <FilmForm onNewFilmSubmit={(film) => addFilm(film)}/>
-        <hr></hr>
-        <UpcomingFilmsButton/>
-        </>
+        <div class="container">
+          <h1 class="heading">Upcoming Film Releases for UK</h1>
+          <hr></hr>
+          <FilmsList films={films}/>
+          <FilmForm onNewFilmSubmit={(film) => addFilm(film)}/>
+          <hr></hr>
+          <UpcomingFilmsButton/>
+        </div>
     )
 }
 

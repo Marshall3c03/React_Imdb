@@ -34,7 +34,7 @@ const FilmForm = ({onNewFilmSubmit}) => {
     
 
     return(
-        <form onSubmit={handleFormSubmit}>
+        <form class="form" onSubmit={handleFormSubmit}>
             <input 
             type="text" 
             placeholder="Film Title" 

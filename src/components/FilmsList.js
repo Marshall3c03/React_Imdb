@@ -14,11 +14,11 @@ const FilmsList = ({films}) => {
 
     
     return(
-        <>
-        <ul>
-            {filmNodes}
-        </ul>
-        </>
+        <div class="movie-list">
+            <ul>
+                {filmNodes}
+            </ul>
+        </div>
     )
 }
 

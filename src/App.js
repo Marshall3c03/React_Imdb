@@ -3,7 +3,7 @@ import FilmsContainer from './containers/FilmsContainer';
 
 function App() {
   return (
-    <FilmsContainer/>
+    <FilmsContainer />
   );
 }
 
